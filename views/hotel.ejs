@@ -1,0 +1,30 @@
+<%- include("partials/header") %>
+<div class="main-flex">
+  <% if(hotel != undefined){ %>
+  <h2><%= hotel.heading %></h2>
+  <div class="hotel-images">
+    <div class="sub-hotel-images1">
+      <img src="<%= hotel.image1 %>" alt="" class="img0" />
+    </div>
+    <div class="sub-hotel-images1 sub-hotel-images">
+      <img src="<%= hotel.image2 %>" alt="" class="img1" />
+      <img src="<%= hotel.image3 %>" alt="" class="img1" />
+
+      <img src="<%= hotel.image4 %>" alt="" class="img1" />
+      <img src="<%= hotel.image5 %>" alt="" class="img1" />
+    </div>
+  </div>
+
+  <h3><%= hotel.subHeading %></h3>
+  <span> ₹<%= hotel.price %> for <%= hotel.nights %> nights </span>
+
+  <div class="facilitys">
+    <%= hotel.guests %> guests <%= hotel.bedroom %> bedroom
+    <%= hotel.bed %> bed <%= hotel.bathroom %> bathroom
+  </div>
+  <div>★<%= hotel.rating %></div>
+  <div class="hotel-reviews">Reviews</div>
+
+  <%}%>
+</div>
+<%- include("partials/footer") %>

@@ -1,0 +1,45 @@
+<%- include("partials/header") %>
+<div class="main-container">
+  <div>
+    <h1>Popular Homes in Pune →</h1>
+    <div id="hotelContainer" class="hotel">
+      <% hotels.forEach((hotel) => { %> 
+        <% if(hotel.location == "pune") { %>
+
+      <div class="card">
+        <a href="/<%= hotel.id %>">
+          <img src="<%= hotel.image1 %>" alt="" />
+        </a>
+        <h3><%= hotel.subHeading %></h3>
+        <span> ₹<%= hotel.price %> for <%= hotel.nights %> nights </span>
+        <span>★<%= hotel.rating %></span>
+
+        <% if(hotel.favorite == "true"){ %>
+        <p class="fav">Guest favorite</p>
+        <% } %>
+      </div>
+
+       <% }}); %>
+    </div>
+  </div>
+  <div>
+    <h1>Popular Homes in Mumbai →</h1>
+    <div id="hotelContainer" class="hotel">
+      <% hotels.forEach((hotel) => { %> <% if(hotel.location == "mumbai") { %>
+
+      <div class="card">
+        <a href="/<%= hotel.id %>">
+          <img src="<%= hotel.image1 %>" alt="" />
+        </a>
+        <h3><%= hotel.subHeading %></h3>
+        <span> ₹<%= hotel.price %> for <%= hotel.nights %> nights </span>
+        <span>★<%= hotel.rating%></span>
+
+        <% if(hotel.favorite=="true"){ %>
+        <p class="fav">Guest favorite</p>
+      </div>
+      <% } }%> <% }); %>
+    </div>
+  </div>
+</div>
+<%- include("partials/footer") %>
