@@ -72,3 +72,4 @@ uploads/
 # MongoDB local data
 # ======================
 data/
+*.css
