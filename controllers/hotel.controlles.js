@@ -3,6 +3,7 @@ const {
   readHotelById,
   createHotel,
   removeHotel,
+  updateHotel,
 } = require("../models/hotel.models");
 
 const getHotels = (req, res) => {
@@ -42,7 +43,7 @@ const postHotel = (req, res) => {
 
 const putHotel = (req, res) => {
   try {
-    putHotel(req.params.id, req.body);
+    updateHotel(req.params.id, req.body);
     res.send("HOtel Updated");
   } catch (error) {
     console.log(error);

@@ -7,7 +7,7 @@
         <% if(hotel.location == "pune") { %>
 
       <div class="card">
-        <a href="/<%= hotel.id %>">
+        <a href="/hotel/<%= hotel.id %>">
           <img src="<%= hotel.image1 %>" alt="" />
         </a>
         <h3><%= hotel.subHeading %></h3>
@@ -28,7 +28,7 @@
       <% hotels.forEach((hotel) => { %> <% if(hotel.location == "mumbai") { %>
 
       <div class="card">
-        <a href="/<%= hotel.id %>">
+        <a href="/hotel/<%= hotel.id %>">
           <img src="<%= hotel.image1 %>" alt="" />
         </a>
         <h3><%= hotel.subHeading %></h3>

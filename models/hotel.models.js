@@ -33,6 +33,8 @@ hotels.push(newhotel)
 
 const updateHotel = (id, newData) => {
   try {
+
+    
   } catch (error) {
     console.log(error);
   }
